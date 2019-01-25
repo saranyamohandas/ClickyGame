@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import Navbar from "./Components/Navbar/Navbar";
-import Jumbotron from "./Components/Jumbotron/Jumbotron";
+import Navbar from "./components/Navbar/Navbar";
+import Jumbotron from "./components/Jumbotron/Jumbotron";
+import Footer from "./components/Footer";
 import './App.css';
 
 
@@ -9,6 +10,7 @@ function App(){
   return (<div> 
   	      <Navbar/>
           <Jumbotron/>
+          <Footer/>
           </div>
 
   	)
