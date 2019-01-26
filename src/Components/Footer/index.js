@@ -3,8 +3,10 @@ import "./style.css";
 
 function Footer() {
   return (
-    <footer className="footer">
-      <span>Clicky Game</span>
+    <footer className="container-fluid footer" >
+     <div className="footContent">
+        Clicky Game Copyright &copy;
+      </div>
     </footer>
   );
 }

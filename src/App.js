@@ -2,14 +2,27 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import Navbar from "./components/Navbar/Navbar";
 import Jumbotron from "./components/Jumbotron/Jumbotron";
+import Image from "./components/Image/Image";
+//import img1 from "./images/img1.jpg"
 import Footer from "./components/Footer";
+
+import Container from "./components/Container/Container";
+//import "./images"
 import './App.css';
+
+//console.log(img1);
 
 
 function App(){
-  return (<div> 
+  return (
+
+  	 // <img className="jumbotron jumbotron-fluid" src={img1}/>
+  	      <div> 
   	      <Navbar/>
           <Jumbotron/>
+          <Container/>
+          
+          
           <Footer/>
           </div>
 

@@ -1,0 +1,18 @@
+.footer{
+    background-color: #666666;
+    
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    margin-top: 25px;
+    border-top:6px solid #E0DF0B;
+}
+.footContent{
+    font-family: arial;
+    font-size: 10px;
+    text-align: center;
+    color: #dddddd;
+    position: absolute;
+    left: 46%;
+    top: 40%;
+}
