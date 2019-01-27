@@ -5,8 +5,8 @@ function Jumbotron(){
 	return (
     <div className="jumbotron jumbotron-fluid">
 	  <div className="container">
-	    <h1 className="display-4">Fluid jumbotron</h1>
-	    <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+	    <h1 className="display-4 text-center">React Clicky Game!!</h1>
+	    <p className="lead text-center">Click to start the game!</p>
 	  </div>
 	</div>
      )
