@@ -1,26 +1,56 @@
 [
   {
     "id": 1,
-    "name": "image1",
+    "name": "Rudy",
     "src": "../images/img1.png",
     "clicked": false
   },
   {
     "id": 2,
-    "name": "image2",
+    "name": "Drink",
     "src": "../../images/img2.png",
     "clicked": false
   },
   {
     "id": 3,
-    "name": "image3",
+    "name": "Lol",
     "src": "../../images/img7.png",
     "clicked": false
   },
   {
     "id": 4,
-    "name": "image4",
+    "name": "Smiley",
     "src": "../../images/img15.png",
+    "clicked": false
+  },
+  {
+    "id": 5,
+    "name": "Heart",
+    "src": "../../images/img3.png",
+    "clicked": false
+  },
+  {
+    "id": 6,
+    "name": "Shy",
+    "src": "../../images/img8.png",
+    "clicked": false
+  },
+  {
+    "id": 7,
+    "name": "Lock",
+    "src": "../../images/img9.png",
+    "clicked": false
+  },
+  {
+    "id": 8,
+    "name": "Think",
+    "src": "../../images/img10.png",
+    "clicked": false
+  },
+  {
+    "id": 9,
+    "name": "Love",
+    "src": "../../images/img11.png",
     "clicked": false
   }
   

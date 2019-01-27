@@ -1,3 +1,17 @@
-/*nav.navbar.navbar-default {
-  margin-bottom: 0;
-}*/
+.customNav {
+  color: black;
+  background-image: linear-gradient(to right, #857107 , #E0BF0B)
+
+}
+.navbar-brand {
+	font-size: 25px;
+	color: black;
+}
+nav h3{
+	position: relative;
+	right: 100px;
+	display: inline-block;
+}
+#status {
+	left: 35px;
+}

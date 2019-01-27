@@ -1,42 +1,55 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import Navbar from "./components/Navbar/Navbar";
 import Jumbotron from "./components/Jumbotron/Jumbotron";
 import Image from "./components/Image/Image";
-
 import Footer from "./components/Footer";
-
 import images from "./imageList.json"
 import Container from "./components/Container/Container";
 
-import './App.css';
 
 
 class App extends Component {
 	state = {
     images,
     counter : 0,
-    status : "Click an emoticon to begin!"
+    status : "",
+    correctGuess : 0 ,
+    topScore : 0
+
   };
 
   handleClick = id => {
-    // Filter this.state.friends for friends with an id not equal to the id being removed
-    //We include only friends with an id property not equal to the id being received into this method. 
+   
     const updateImages = this.state.images.map(image => {
     	if(image.id === id) {
     		if(!image.clicked) {
     			image.clicked = true;
+          this.setState({correctGuess : this.state.correctGuess + 1})
 	    		this.setState({counter : this.state.counter + 1})
 	    		this.setState({status : "You guessed correctly!"})
 	    		console.log("status",this.state.status);
 	    		console.log("counter",this.state.counter);
-    		} else {
+          this.updateTopScore();
+    		} else if (this.state.correctGuess >= 9){
+          this.setState({status : "All images clicked!"})
+          this.updateTopScore();
+
+        } else {
+    			
+    			// const newTopScore = this.state.topScore < this.state.counter ? this.state.counter: this.state.topScore;
+       //          this.setState({topScore : newTopScore})
+       //          console.log("top",this.state.topScore);
 	    		this.setState({counter : 0})
 	    		this.setState({status : "You guessed it wrong!"})
+          this.updateTopScore();
     	}
+      // const newTopScore = this.state.topScore < this.state.counter ? this.state.counter: this.state.topScore;
+      //           this.setState({topScore : newTopScore})
+      //           console.log("top",this.state.topScore);
+
     }
 }
-)
+);
 
     
     const shuffleImages = this.state.images.map(image => {
@@ -51,18 +64,23 @@ class App extends Component {
     }
     )
 
-    //this.setState({counter : this.state.counter + 1})
     this.setState(images);
-    console.log("Counter",this.state.counter);
-    
+     
   };
+
+  updateTopScore = () => {
+
+    const newTopScore = this.state.topScore < this.state.counter ? this.state.counter: this.state.topScore;
+              this.setState({topScore : newTopScore})
+              console.log("top",this.state.topScore);
+  }
 
 
 
   render() {
   	return (
     	 <div> 
-  	      <Navbar count={this.state.counter} status={this.state.status}/>
+  	      <Navbar count={this.state.counter} status={this.state.status} topscore={this.state.topScore}/>
           <Jumbotron />
           <Container>
           {this.state.images.map(data => (

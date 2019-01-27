@@ -1,18 +1,16 @@
 import React,{Component} from "react";
-//import "./style.css";
-import Container from "../Container/Container"
+import "./style.css";
 
 class Navbar extends Component {
 
 	render(){
 		return (
-		    <nav className="navbar navbar-dark fixed-top bg-primary">
-		    <a className="navbar-brand" href="#">Navbar</a>
-		    <h2>{this.props.status}</h2>
-		    <h2> Score: {this.props.count}  </h2>
-		    <h2> Top Score:  </h2>
-		     
-			</nav>
+		    <nav className="navbar fixed-top bg-warning customNav">
+			    <a className="navbar-brand" href="#">ClickyGame</a>
+			    <h3 id="status">{this.props.status}</h3>
+			    <h3> Score: {this.props.count} | Top Score: {this.props.topscore}  </h3>
+			    
+			 </nav>
      )
 	}
 }
