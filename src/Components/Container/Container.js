@@ -11,7 +11,8 @@ class Container extends Component {
   //if the object's key and value have the same name, 
   //we can omit the colon — this is just an optional shorthand syntax.
   state = {
-    images
+    images,
+    counter : 1 
   };
 
   handleClick = id => {
@@ -22,16 +23,19 @@ class Container extends Component {
     		image.clicked = true;
     		console.log("updated",updateImages)
     	}
-    	alert(id + "is clicked")
-       console.log(this.state.images);
-       console.log("images",images);
-       console.log(id);
+    	// alert(id + "is clicked")
+     //   console.log(this.state.images);
+     //   console.log("images",images);
+     //   console.log(id);
       //this.setState(images);;
 
     }
     
     	);
+    this.setState({counter : this.state.counter + 1})
     this.setState(images);
+    console.log("Counter",this.state.counter);
+
     // Set this.state.friends equal to the new friends array
     //when we update our component's state by removing one of the friend objects, our component re-renders itself.
     //this.setState({ images });
