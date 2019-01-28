@@ -57,7 +57,9 @@ class App extends Component {
     	for(i=this.state.images.length-1;i>0;i--){
     		j = Math.floor(Math.random() * (i + 1));
 	        temp = this.state.images[i];
+         // this.setState({images[i] : this.state.images[j]})
 	        this.state.images[i] = this.state.images[j];
+          //this.setState({images[j] : temp})
 	        this.state.images[j] = temp;
     	}
 
